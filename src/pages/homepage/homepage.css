@@ -1,0 +1,37 @@
+.homepage__main {
+    padding: 4rem 1rem;
+    width: 100%;
+}
+
+.main__heading{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.quiz__card-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: scroll;
+    gap: 5rem;
+    padding: 3rem;
+}
+
+.card{
+    min-width: 20rem;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+}
+
+.card__name{
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+.play__cta > .btn{
+    width: 100%;
+    margin-top: 2rem;
+}
+
