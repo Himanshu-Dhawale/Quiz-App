@@ -3,11 +3,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import * as ReactDOMClient from "react-dom/client";
-
+import { BrowserRouter } from "react-router-dom";
+import { QuizzContextProvider } from "./contexts/quiz-context";
 const root = ReactDOMClient.createRoot(document.getElementById("root"));
 root.render(
   <StrictMode>
+    <BrowserRouter>
+    <QuizzContextProvider>
           <App />
+    </QuizzContextProvider>
+    </BrowserRouter>
   </StrictMode>
 );
 

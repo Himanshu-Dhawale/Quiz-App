@@ -1,6 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useQuizzContext } from '../../contexts/quiz-context'
 import "./Card.css"
 const Card = ({items}) => {
+  const {quizzDispatch} = useQuizzContext()
+
+
   return (
     <div>
         <div className=" card card__vertical">
@@ -12,7 +17,11 @@ const Card = ({items}) => {
                 <div className="text-btn-container">
                 <h6><strong>{items.category} </strong></h6>
                 <div className="play__cta">
-                <button className="btn btn-primary-solid">Play</button>
+                <Link to='/rules'>
+                <button className="btn btn-primary-solid"
+                onClick = {() => quizzDispatch({type : "PLAY_CLICK", payload : items})}
+                >Play</button>
+                </Link>
                  </div>
                     </div>
                     </div>
