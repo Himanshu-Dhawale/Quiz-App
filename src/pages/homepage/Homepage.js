@@ -13,7 +13,7 @@ const Homepage = () => {
         <section className="quiz__card-section">
             {Categories.map((items) => {
                 return(
-                    <Card items = {items} />
+                    <Card items = {items} key={items.id}/>
                 
                 )
               
